@@ -1,0 +1,25 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Coin Flipper" icon="" />
+    <GridLayout rows="auto, *, auto" class="p-4">
+        <!-- Coin -->
+        <StackLayout row="0" class="text-center">
+            <Image id="coin" src="~/images/heads.png" width="150" height="150" class="mb-4" />
+            <Button text="FLIP COIN" tap="{{ onFlip }}" class="-primary mb-4" />
+            <Label text="{{ result }}" class="text-xl font-bold mb-4" />
+        </StackLayout>
+
+        <!-- Stats -->
+        <GridLayout row="1" rows="auto, *">
+            <Label text="Statistics" class="text-xl font-bold text-center mb-2" />
+            <GridLayout row="1" rows="auto, auto" columns="*, *" class="text-center">
+                <Label col="0" text="Heads" class="text-lg" />
+                <Label col="1" text="Tails" class="text-lg" />
+                <Label col="0" row="1" text="{{ headsCount }}" class="text-2xl font-bold" />
+                <Label col="1" row="1" text="{{ tailsCount }}" class="text-2xl font-bold" />
+            </GridLayout>
+        </GridLayout>
+
+        <!-- Pie Chart -->
+        <GridLayout row="2" id="chartContainer" class="m-4" width="200" height="200" />
+    </GridLayout>
+</Page>

@@ -1,0 +1,10 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+    <GridLayout rows="*" columns="*">
+        <StackLayout>
+            <Label text="{{ chartTitle }}" class="text-xl font-bold text-center my-2" />
+            <GridLayout id="chartContainer" class="m-4" width="200" height="200">
+                <!-- The pie chart segments will be added dynamically -->
+            </GridLayout>
+        </StackLayout>
+    </GridLayout>
+</Page>
